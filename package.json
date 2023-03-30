@@ -9,6 +9,7 @@
   "author": "Sir-Lancelot27",
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "minimist": "^1.2.8",
     "moment-timezone": "^0.5.42",
     "node-fetch": "^3.3.1"
   },
