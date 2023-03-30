@@ -45,13 +45,13 @@ if (json) {
 const days = args.d 
 
 // Check if need your galoshes
-data.daily.precipitation_hours[day] > 0 ? conosole.log('You might need your galoshes ') : conosole.log('You will not need your galoshes  ');
+var needGaloshes = data.daily.precipitation_hours[day] > 0 ? 'You might need your galoshes ' : 'You will not need your galoshes ';
 
 // Report for given day
 if (days == 0) {
-  console.log("today.")
+  console.log(needGaloshes + "today.")
 } else if (days > 1) {
-  console.log("in " + days + " days.")
+  console.log(needGaloshes + "in " + days + " days.")
 } else {
-  console.log("tomorrow.")
+  console.log(needGaloshes + "tomorrow.")
 }
