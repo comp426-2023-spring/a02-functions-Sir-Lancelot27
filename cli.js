@@ -27,8 +27,6 @@ const timezone = args.z || moment.tz.guess() ;
 
 const day = args.d || 1;
 
-const json = args.j;
-
 // Make a request.
 const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+long+'&timezone='+timezone+'&daily=precipitation_hours');
 
@@ -36,7 +34,7 @@ const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude='+
 const data = await response.json();
 
 // If json only return json.
-if (json) {
+if (args.j) {
     console.log(data);
     process.exit(0);
 }
